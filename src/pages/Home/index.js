@@ -4,7 +4,7 @@ import { useLocation } from 'react-router-dom';
 import BookContent from '../../content/BookContent.json';
 import Intro1Content from '../../content/Intro1Content.json';
 import Intro2Content from '../../content/Intro2Content.json';
-import ProductContent from '../../content/ProductContent.json';
+import Step3DoneContent from '../../content/Step3DoneContent.json';
 import Step1BookContent from '../../content/Step1BookContent.json';
 import Step2ConfirmContent from '../../content/Step2ConfirmContent.json';
 
@@ -20,7 +20,6 @@ const Home = () => {
   return (
     <Container>
       <ScrollToTop />
-      {roomId && <BookFrom title={BookContent.title} content={BookContent.text} id="book" />}
       <ContentBlock
         type="right"
         first="true"
@@ -52,11 +51,12 @@ const Home = () => {
 
       <ContentBlock
         type="left"
-        title={ProductContent.title}
-        content={ProductContent.text}
+        title={Step3DoneContent.title}
+        content={Step3DoneContent.text}
         icon="waving.svg"
         id="product"
       />
+      {roomId && <BookFrom title={BookContent.title} content={BookContent.text} id="book" />}
     </Container>
   );
 };

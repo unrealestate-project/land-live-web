@@ -51,14 +51,11 @@ const Header = ({ t }) => {
         <S.CustomNavLinkSmall onClick={() => scrollTo('step')}>
           <S.Span>{t('How it works?')}</S.Span>
         </S.CustomNavLinkSmall>
-        <S.CustomNavLinkSmall
-          style={{ width: '30px' }}
-          onClick={() => scrollTo('contact')}
-        ></S.CustomNavLinkSmall>
+        <S.CustomNavLinkSmall></S.CustomNavLinkSmall>
         <S.CustomNavLinkSmall>
           <S.LangSelect onChange={handleChange} value={i18n.language} id="select-lang">
+            <option value="ko">한국어</option>
             <option value="en">English</option>
-            <option value="es">Español</option>
           </S.LangSelect>
         </S.CustomNavLinkSmall>
       </Fragment>
@@ -70,7 +67,11 @@ const Header = ({ t }) => {
       <S.Container>
         <Row type="flex" justify="space-between" gutter={20}>
           <S.LogoContainer to="/" aria-label="homepage">
-            <SvgIcon src="logo.svg" />
+            {i18n.language === 'ko' ? (
+              <SvgIcon src="landlive_logo_ko.svg" />
+            ) : (
+              <SvgIcon src="landlive_logo_en.svg" />
+            )}
           </S.LogoContainer>
           <S.NotHidden>
             <MenuItem />

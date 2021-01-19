@@ -38,8 +38,8 @@ const Book = ({ title, content, id, t }) => {
                 <Input
                   type="text"
                   name="name"
-                  id="KakaoTalk ID"
-                  placeholder="Please type your KakaoTalk id!"
+                  id={t('KakaoTalk ID')}
+                  placeholder={t('Please type your KakaoTalk ID!')}
                   value={values.name || ''}
                   onChange={handleChange}
                 />
