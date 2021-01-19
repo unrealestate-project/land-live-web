@@ -26,7 +26,6 @@ const Footer = ({ t }) => {
                 <S.Language>{t('Contact')}</S.Language>
                 <S.Para>{'© 2021 Land Corporation, Inc.'}</S.Para>
                 <S.Para>{'Email: jin@landcorp.io'}</S.Para>
-                <S.Para>{'Phone: +82)10-3243-3994'}</S.Para>
               </Col>
             </Row>
           </Container>

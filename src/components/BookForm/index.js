@@ -1,17 +1,15 @@
-import React from 'react';
-import { Row, Col } from 'antd';
-import Zoom from 'react-reveal/Zoom';
 import loadable from '@loadable/component';
+import { Col, Row } from 'antd';
+import React from 'react';
 import { withTranslation } from 'react-i18next';
-
+import Zoom from 'react-reveal/Zoom';
+import * as S from './styles';
 import useForm from './useForm';
 import validate from './validationRules';
-import * as S from './styles';
 
 const Block = loadable(() => import('../Block'));
 const Input = loadable(() => import('../../common/Input'));
 const Button = loadable(() => import('../../common/Button'));
-const TextArea = loadable(() => import('../../common/TextArea'));
 
 const Book = ({ title, content, id, t }) => {
   const { values, errors, handleChange, handleSubmit } = useForm(validate);
@@ -40,33 +38,12 @@ const Book = ({ title, content, id, t }) => {
                 <Input
                   type="text"
                   name="name"
-                  id="Name"
-                  placeholder="Your phone number"
+                  id="KakaoTalk ID"
+                  placeholder="Please type your KakaoTalk id!"
                   value={values.name || ''}
                   onChange={handleChange}
                 />
                 <ValidationType type="name" />
-              </Col>
-              <Col span={24}>
-                <Input
-                  type="text"
-                  name="email"
-                  id="Email"
-                  placeholder="Your Email"
-                  value={values.email || ''}
-                  onChange={handleChange}
-                />
-                <ValidationType type="email" />
-              </Col>
-              <Col span={24}>
-                <TextArea
-                  placeholder="Your Message"
-                  value={values.message || ''}
-                  name="message"
-                  id="Message"
-                  onChange={handleChange}
-                />
-                <ValidationType type="message" />
               </Col>
               <S.ButtonContainer>
                 <Button name="submit" type="submit">
