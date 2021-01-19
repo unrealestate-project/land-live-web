@@ -5,9 +5,12 @@ import { withTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group';
 import * as S from './styles';
-
+import i18n from 'i18next';
 const SvgIcon = loadable(() => import('../../common/SvgIcon'));
-const Button = loadable(() => import('../../common/Button'));
+
+const handleChange = (event) => {
+  i18n.changeLanguage(event.target.value);
+};
 
 const Header = ({ t }) => {
   const location = useLocation();
@@ -35,13 +38,28 @@ const Header = ({ t }) => {
     };
     return (
       <Fragment>
-        <S.CustomNavLinkSmall style={{ width: '180px' }} onClick={() => scrollTo('contact')}>
-          {roomId && (
+        {roomId && (
+          <S.CustomNavLinkSmall onClick={() => scrollTo('book')}>
             <S.Span>
-              <S.Span>{t('To arrange Live+ tour..')}</S.Span>
-              <Button>{t('Book here! 🤙 ')}</Button>
+              <S.Span>{t('Book!')}</S.Span>
             </S.Span>
-          )}
+          </S.CustomNavLinkSmall>
+        )}
+        <S.CustomNavLinkSmall onClick={() => scrollTo('intro')}>
+          <S.Span>{t('land LIVE+?')}</S.Span>
+        </S.CustomNavLinkSmall>
+        <S.CustomNavLinkSmall onClick={() => scrollTo('step')}>
+          <S.Span>{t('How it works?')}</S.Span>
+        </S.CustomNavLinkSmall>
+        <S.CustomNavLinkSmall
+          style={{ width: '30px' }}
+          onClick={() => scrollTo('contact')}
+        ></S.CustomNavLinkSmall>
+        <S.CustomNavLinkSmall>
+          <S.LangSelect onChange={handleChange} value={i18n.language} id="select-lang">
+            <option value="en">English</option>
+            <option value="es">Español</option>
+          </S.LangSelect>
         </S.CustomNavLinkSmall>
       </Fragment>
     );

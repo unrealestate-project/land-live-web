@@ -41,7 +41,7 @@ const Contact = ({ title, content, id, t }) => {
                   type="text"
                   name="name"
                   id="Name"
-                  placeholder="Your Name"
+                  placeholder="Your phone number"
                   value={values.name || ''}
                   onChange={handleChange}
                 />
