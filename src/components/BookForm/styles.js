@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
-export const ContactContainer = styled.div`
+export const BookContainer = styled.div`
   padding: 5rem 0;
 `;
 
-export const Contact = styled.section`
+export const Book = styled.section`
   position: relative;
   width: 100%;
   max-width: 1280px;

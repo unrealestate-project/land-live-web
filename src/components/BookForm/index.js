@@ -13,7 +13,7 @@ const Input = loadable(() => import('../../common/Input'));
 const Button = loadable(() => import('../../common/Button'));
 const TextArea = loadable(() => import('../../common/TextArea'));
 
-const Contact = ({ title, content, id, t }) => {
+const Book = ({ title, content, id, t }) => {
   const { values, errors, handleChange, handleSubmit } = useForm(validate);
 
   const ValidationType = ({ type }) => {
@@ -28,8 +28,8 @@ const Contact = ({ title, content, id, t }) => {
   };
 
   return (
-    <S.ContactContainer id={id}>
-      <S.Contact>
+    <S.BookContainer id={id}>
+      <S.Book>
         <Row type="flex" justify="space-between" align="middle">
           <Col lg={12} md={11} sm={24}>
             <Block padding={true} title={title} content={content} />
@@ -76,9 +76,9 @@ const Contact = ({ title, content, id, t }) => {
             </S.FormGroup>
           </Col>
         </Row>
-      </S.Contact>
-    </S.ContactContainer>
+      </S.Book>
+    </S.BookContainer>
   );
 };
 
-export default withTranslation()(Contact);
+export default withTranslation()(Book);

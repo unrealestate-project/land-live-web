@@ -8,7 +8,7 @@ import ProductContent from '../../content/ProductContent.json';
 import Step1BookContent from '../../content/Step1BookContent.json';
 import Step2ConfirmContent from '../../content/Step2ConfirmContent.json';
 
-const ContactFrom = loadable(() => import('../../components/ContactForm'));
+const BookFrom = loadable(() => import('../../components/BookForm'));
 const ContentBlock = loadable(() => import('../../components/ContentBlock'));
 const MiddleBlock = loadable(() => import('../../components/MiddleBlock'));
 const Container = loadable(() => import('../../common/Container'));
@@ -20,7 +20,7 @@ const Home = () => {
   return (
     <Container>
       <ScrollToTop />
-      {roomId && <ContactFrom title={BookContent.title} content={BookContent.text} id="book" />}
+      {roomId && <BookFrom title={BookContent.title} content={BookContent.text} id="book" />}
       <ContentBlock
         type="right"
         first="true"
