@@ -1,11 +1,11 @@
 import loadable from '@loadable/component';
 import { Col, Drawer, Row } from 'antd';
+import i18n from 'i18next';
 import React, { Fragment, useState } from 'react';
 import { withTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group';
 import * as S from './styles';
-import i18n from 'i18next';
 const SvgIcon = loadable(() => import('../../common/SvgIcon'));
 
 const handleChange = (event) => {
