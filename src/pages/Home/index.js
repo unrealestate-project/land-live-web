@@ -1,12 +1,12 @@
-import React from 'react';
 import loadable from '@loadable/component';
-
+import React from 'react';
+import { useParams } from 'react-router-dom';
+import AboutContent from '../../content/AboutContent.json';
+import ContactContent from '../../content/ContactContent.json';
 import IntroContent from '../../content/IntroContent.json';
 import MiddleBlockContent from '../../content/MiddleBlockContent.json';
-import AboutContent from '../../content/AboutContent.json';
 import MissionContent from '../../content/MissionContent.json';
 import ProductContent from '../../content/ProductContent.json';
-import ContactContent from '../../content/ContactContent.json';
 
 const ContactFrom = loadable(() => import('../../components/ContactForm'));
 const ContentBlock = loadable(() => import('../../components/ContentBlock'));
@@ -27,11 +27,10 @@ const Home = () => {
         icon="developer.svg"
         id="intro"
       />
-      <MiddleBlock
-        title={MiddleBlockContent.title}
-        content={MiddleBlockContent.text}
-        button={MiddleBlockContent.button}
-      />
+      <MiddleBlock title={MiddleBlockContent.title} content={MiddleBlockContent.text} />
+
+      {/* TODO(@jin) Insert 2 video clips  */}
+
       <ContentBlock
         type="left"
         title={AboutContent.title}
@@ -55,11 +54,7 @@ const Home = () => {
         icon="waving.svg"
         id="product"
       />
-      <ContactFrom
-        title={ContactContent.title}
-        content={ContactContent.text}
-        id="contact"
-      />
+      <ContactFrom title={ContactContent.title} content={ContactContent.text} id="contact" />
     </Container>
   );
 };

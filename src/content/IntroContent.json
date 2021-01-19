@@ -1,10 +1,7 @@
 {
-  "title": "Landing page template for developers & startups",
-  "text": "Beautifully designed templates using React.js, ant design and styled-components! Save weeks of time and build your landing page in minutes.",
+  "title": "Don't waste your energy, touring real estates",
+  "text": "You do not need to take one-day off from work just to arrange tours for real estates in your list. Just tour with your agents at home with a cup of coffee!! ☕️😎",
   "button": [
-    {
-      "title": "Explore"
-    },
     {
       "title": "Learn More",
       "color": "#fff"

@@ -1,15 +1,15 @@
 {
-  "title": "Light, Fast & Responsive",
-  "text": "This template is ready to use, so you don't need to change anything at a component level, unless you want to customize the default styling.",
+  "title": "1) Book your tour",
+  "text": "Just fill out below land LIVE+ tour reservation form and submit! 🗓",
   "section": [
     {
-      "title": "Why Antd?",
-      "content": "Ant Design is a React UI library that has a lot of easy-to-use components for building elegant UI.",
-      "icon": "notes.svg"
+      "title": "KakaoTalk needed!",
+      "content": "In order to confirm your reservation and further notice about land LIVE+ tour, you need to have a valid KakaoTalk account.",
+      "icon": "kakaotalk_logo.svg"
     },
     {
-      "title": "Why styled-components?",
-      "content": "Styled Components gives you total control over your components.",
+      "title": "Book, book, book!",
+      "content": "You can book as many Live tour as you want, so please watch, ask and decide the best real estate worth leg working.",
       "icon": "notes.svg"
     }
   ]
