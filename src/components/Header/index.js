@@ -1,15 +1,18 @@
-import React, { useState, Fragment } from 'react';
-import { Row, Col, Drawer } from 'antd';
-import { CSSTransition } from 'react-transition-group';
-import { withTranslation } from 'react-i18next';
 import loadable from '@loadable/component';
-
+import { Col, Drawer, Row } from 'antd';
+import React, { Fragment, useState } from 'react';
+import { withTranslation } from 'react-i18next';
+import { useLocation } from 'react-router-dom';
+import { CSSTransition } from 'react-transition-group';
 import * as S from './styles';
 
 const SvgIcon = loadable(() => import('../../common/SvgIcon'));
 const Button = loadable(() => import('../../common/Button'));
 
 const Header = ({ t }) => {
+  const location = useLocation();
+  const roomId = location.hash.replace('#/', '');
+
   const [isNavVisible] = useState(false);
   const [isSmallScreen] = useState(false);
   const [visible, setVisibility] = useState(false);
@@ -33,10 +36,12 @@ const Header = ({ t }) => {
     return (
       <Fragment>
         <S.CustomNavLinkSmall style={{ width: '180px' }} onClick={() => scrollTo('contact')}>
-          <S.Span>
-            <S.Span>{t('To arrange Live+ tour..')}</S.Span>
-            <Button>{t('Book here! 🤙 ')}</Button>
-          </S.Span>
+          {roomId && (
+            <S.Span>
+              <S.Span>{t('To arrange Live+ tour..')}</S.Span>
+              <Button>{t('Book here! 🤙 ')}</Button>
+            </S.Span>
+          )}
         </S.CustomNavLinkSmall>
       </Fragment>
     );

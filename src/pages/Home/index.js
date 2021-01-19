@@ -1,6 +1,6 @@
 import loadable from '@loadable/component';
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import AboutContent from '../../content/AboutContent.json';
 import ContactContent from '../../content/ContactContent.json';
 import IntroContent from '../../content/IntroContent.json';
@@ -15,6 +15,8 @@ const Container = loadable(() => import('../../common/Container'));
 const ScrollToTop = loadable(() => import('../../common/ScrollToTop'));
 
 const Home = () => {
+  const location = useLocation();
+  const roomId = location.hash.replace('#/', '');
   return (
     <Container>
       <ScrollToTop />
@@ -54,7 +56,9 @@ const Home = () => {
         icon="waving.svg"
         id="product"
       />
-      <ContactFrom title={ContactContent.title} content={ContactContent.text} id="contact" />
+      {roomId && (
+        <ContactFrom title={ContactContent.title} content={ContactContent.text} id="contact" />
+      )}
     </Container>
   );
 };
