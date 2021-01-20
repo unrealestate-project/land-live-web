@@ -67,11 +67,7 @@ const Header = ({ t }) => {
       <S.Container>
         <Row type="flex" justify="space-between" gutter={20}>
           <S.LogoContainer to="/" aria-label="homepage">
-            {i18n.language === 'ko' ? (
-              <SvgIcon src="landlive_logo_ko.svg" />
-            ) : (
-              <SvgIcon src="landlive_logo_en.svg" />
-            )}
+            <SvgIcon src="landlive_logo_en.svg" />
           </S.LogoContainer>
           <S.NotHidden>
             <MenuItem />
