@@ -20,6 +20,7 @@ const Home = () => {
   return (
     <Container>
       <ScrollToTop />
+      {roomId && <BookFrom title={BookContent.title} content={BookContent.text} id="book" />}
       <ContentBlock
         type="right"
         first="true"
@@ -56,7 +57,6 @@ const Home = () => {
         icon="waving.svg"
         id="product"
       />
-      {roomId && <BookFrom title={BookContent.title} content={BookContent.text} id="book" />}
     </Container>
   );
 };
