@@ -1,13 +1,14 @@
 import loadable from '@loadable/component';
-import { Card, Col, Row, Button as AntButton } from 'antd';
+import { Button as AntButton, Card, Col, Row } from 'antd';
 import axios from 'axios';
-import React, { useState, useEffect } from 'react';
+import i18n from 'i18next';
+import React, { useEffect, useState } from 'react';
 import { withTranslation } from 'react-i18next';
 import Zoom from 'react-reveal/Zoom';
+import { SERVER_BASE_URL } from '../../infra/constants';
 import * as S from './styles';
 import useForm from './useForm';
 import validate from './validationRules';
-import i18n from 'i18next';
 
 const moment = require('moment');
 const Block = loadable(() => import('../Block'));
@@ -32,7 +33,7 @@ const onClickCard = () => {
 
 const FetchToursList = (realEstateId, t) => {
   const [tours, setTours] = useState([]);
-  const url = `http://127.0.0.1:8000/api/v1/booking/real_estates/${realEstateId}/tours`;
+  const url = `${SERVER_BASE_URL}/booking/real_estates/${realEstateId}/tours`;
   useEffect(() => {
     const callApi = async () => {
       try {
@@ -56,13 +57,11 @@ const FetchToursList = (realEstateId, t) => {
           const { title, content } = processDateTime(streaming_date, streaming_duration_min);
           return (
             <Col span={8}>
-              <div key={id}>
-                <Card bordered={true} align="center" bodyStyle={{ backgroundColor: '#f0f0f0' }}>
-                  <strong>{title}</strong>
-                  <p>{content}</p>
-                  <AntButton onClick={onClickCard}>Select</AntButton>
-                </Card>
-              </div>
+              <Card bordered={true} align="center" bodyStyle={{ backgroundColor: '#f0f0f0' }}>
+                <strong>{title}</strong>
+                <p>{content}</p>
+                <AntButton onClick={onClickCard}>{t('Select')}</AntButton>
+              </Card>
             </Col>
           );
         })}
@@ -106,7 +105,6 @@ const Book = ({ title, content, id, t, realEstateId }) => {
                 <ValidationType type="kakaotalk_id" />
               </Col>
 
-              {/* TODO(@jin) 여기서부터 예약폼 작성 */}
               <Col>{FetchToursList(realEstateId, t)}</Col>
 
               <S.ButtonContainer>
