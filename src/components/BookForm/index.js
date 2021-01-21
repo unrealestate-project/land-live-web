@@ -48,7 +48,7 @@ const FetchToursList = (url, t) => {
     <div className="site-card-wrapper">
       <label htmlFor="bookCard">{t('Tour Schedule')}</label>
       <Row gutter={16}>
-        {tours.map(({ id, streaming_date, streaming_duration_min }) => {
+        {tours.map(({ streaming_date, streaming_duration_min }) => {
           const { title, content } = processDateTime(streaming_date, streaming_duration_min);
           return (
             <Col span={8}>

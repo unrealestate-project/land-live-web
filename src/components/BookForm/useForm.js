@@ -32,8 +32,7 @@ const useForm = (validate, t) => {
         .then(() => {
           setShouldSubmit(true);
         })
-        .catch((error) => {
-          console.log(error.response.data);
+        .catch(() => {
           openNotificationWithIcon('error');
         });
     }
