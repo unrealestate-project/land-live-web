@@ -1,5 +1,5 @@
 import loadable from '@loadable/component';
-import { Button as AntButton, Card, Col, Row } from 'antd';
+import { Card, Col, Row } from 'antd';
 import axios from 'axios';
 import i18n from 'i18next';
 import React, { useEffect, useState } from 'react';
@@ -27,13 +27,8 @@ function processDateTime(streaming_date) {
   return { title, content };
 }
 
-const onClickCard = () => {
-  console.log('hihihi');
-};
-
-const FetchToursList = (realEstateId, t) => {
+const FetchToursList = (url, t) => {
   const [tours, setTours] = useState([]);
-  const url = `${SERVER_BASE_URL}/booking/real_estates/${realEstateId}/tours`;
   useEffect(() => {
     const callApi = async () => {
       try {
@@ -51,7 +46,7 @@ const FetchToursList = (realEstateId, t) => {
   }, []);
   return (
     <div className="site-card-wrapper">
-      <label htmlFor="bookCard">{t('Available Booking')}</label>
+      <label htmlFor="bookCard">{t('Tour Schedule')}</label>
       <Row gutter={16}>
         {tours.map(({ id, streaming_date, streaming_duration_min }) => {
           const { title, content } = processDateTime(streaming_date, streaming_duration_min);
@@ -60,7 +55,6 @@ const FetchToursList = (realEstateId, t) => {
               <Card bordered={true} align="center" bodyStyle={{ backgroundColor: '#f0f0f0' }}>
                 <strong>{title}</strong>
                 <p>{content}</p>
-                <AntButton onClick={onClickCard}>{t('Select')}</AntButton>
               </Card>
             </Col>
           );
@@ -71,7 +65,8 @@ const FetchToursList = (realEstateId, t) => {
 };
 
 const Book = ({ title, content, id, t, realEstateId }) => {
-  const { values, errors, handleChange, handleSubmit } = useForm(validate);
+  const { values, errors, handleChange, handleSubmit } = useForm(validate, t);
+  const url = `${SERVER_BASE_URL}/booking/real_estates/${realEstateId}/tours`;
 
   const ValidationType = ({ type }) => {
     const ErrorMessage = errors[type];
@@ -92,24 +87,24 @@ const Book = ({ title, content, id, t, realEstateId }) => {
             <Block padding={true} title={title} content={content} />
           </Col>
           <Col lg={12} md={12} sm={24}>
-            <S.FormGroup autoComplete="off" onSubmit={handleSubmit}>
+            <S.FormGroup autoComplete="off" onSubmit={(e) => handleSubmit(e, url)}>
               <Col span={24}>
+                <ValidationType type="kakaotalkId" />
                 <Input
                   type="text"
-                  name="kakaotalk_id"
+                  name="kakaotalkId"
                   id={t('KakaoTalk ID')}
                   placeholder={t('Please type your KakaoTalk ID!')}
-                  value={values.kakaotalk_id || ''}
+                  value={values.kakaotalkId || ''}
                   onChange={handleChange}
                 />
-                <ValidationType type="kakaotalk_id" />
               </Col>
 
-              <Col>{FetchToursList(realEstateId, t)}</Col>
+              <Col>{FetchToursList(url, t)}</Col>
 
               <S.ButtonContainer>
                 <Button name="submit" type="submit">
-                  {t('Submit')}
+                  {t('Book')}
                 </Button>
               </S.ButtonContainer>
             </S.FormGroup>

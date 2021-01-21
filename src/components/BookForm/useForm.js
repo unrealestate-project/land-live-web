@@ -2,30 +2,39 @@ import { useState, useEffect } from 'react';
 import { notification } from 'antd';
 import axios from 'axios';
 
-const useForm = (validate) => {
+const useForm = (validate, t) => {
   const [values, setValues] = useState({});
   const [errors, setErrors] = useState({});
   const [shouldSubmit, setShouldSubmit] = useState(false);
 
   const openNotificationWithIcon = (type) => {
-    notification[type]({
-      message: 'Success',
-      description: 'Your message has been sent!',
-    });
+    if (type === 'success') {
+      notification[type]({
+        message: t('Success 💫'),
+        description: t('Your tour has been booked!'),
+      });
+    } else {
+      notification[type]({
+        message: t('Sorry 😔'),
+        description: t('You already booked tour!'),
+      });
+    }
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event, url) => {
     event.preventDefault();
-    setErrors(validate(values));
-    // Your url for API
-    const url = '';
-    if (Object.keys(values).length === 3) {
+    setErrors(validate(values, t));
+    if (Object.keys(values).length === 1) {
       axios
         .post(url, {
           ...values,
         })
         .then(() => {
           setShouldSubmit(true);
+        })
+        .catch((error) => {
+          console.log(error.response.data);
+          openNotificationWithIcon('error');
         });
     }
   };
@@ -35,6 +44,7 @@ const useForm = (validate) => {
       setValues('');
       openNotificationWithIcon('success');
     }
+    // eslint-disable-next-line
   }, [errors, shouldSubmit]);
 
   const handleChange = (event) => {
