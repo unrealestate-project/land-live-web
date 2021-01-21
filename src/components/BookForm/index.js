@@ -1,14 +1,13 @@
 import loadable from '@loadable/component';
-import { Card, Col, Row } from 'antd';
+import { Card, Col, Row, Button as AntButton } from 'antd';
 import axios from 'axios';
-import i18n from 'i18next';
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { withTranslation } from 'react-i18next';
 import Zoom from 'react-reveal/Zoom';
-import { SERVER_BASE_URL } from '../../infra/constants';
 import * as S from './styles';
 import useForm from './useForm';
 import validate from './validationRules';
+import i18n from 'i18next';
 
 const moment = require('moment');
 const Block = loadable(() => import('../Block'));
@@ -27,8 +26,9 @@ function processDateTime(streaming_date) {
   return { title, content };
 }
 
-const FetchToursList = (url, t) => {
+const FetchToursList = (realEstateId, t) => {
   const [tours, setTours] = useState([]);
+  const url = `http://127.0.0.1:8000/api/v1/booking/real_estates/${realEstateId}/tours`;
   useEffect(() => {
     const callApi = async () => {
       try {
@@ -46,16 +46,19 @@ const FetchToursList = (url, t) => {
   }, []);
   return (
     <div className="site-card-wrapper">
-      <label htmlFor="bookCard">{t('Tour Schedule')}</label>
+      <label htmlFor="bookCard">{t('Available Booking')}</label>
       <Row gutter={16}>
         {tours.map(({ id, streaming_date, streaming_duration_min }) => {
           const { title, content } = processDateTime(streaming_date, streaming_duration_min);
           return (
             <Col span={8}>
-              <Card bordered={true} align="center" bodyStyle={{ backgroundColor: '#f0f0f0' }}>
-                <strong>{title}</strong>
-                <p>{content}</p>
-              </Card>
+              <div key={id}>
+                <Card bordered={true} align="center" bodyStyle={{ backgroundColor: '#f0f0f0' }}>
+                  <strong>{title}</strong>
+                  <p>{content}</p>
+                  <AntButton onClick={onClickCard}>Select</AntButton>
+                </Card>
+              </div>
             </Col>
           );
         })}
@@ -65,8 +68,7 @@ const FetchToursList = (url, t) => {
 };
 
 const Book = ({ title, content, id, t, realEstateId }) => {
-  const { values, errors, handleChange, handleSubmit } = useForm(validate, t);
-  const url = `${SERVER_BASE_URL}/booking/real_estates/${realEstateId}/tours`;
+  const { values, errors, handleChange, handleSubmit } = useForm(validate);
 
   const ValidationType = ({ type }) => {
     const ErrorMessage = errors[type];
@@ -87,24 +89,25 @@ const Book = ({ title, content, id, t, realEstateId }) => {
             <Block padding={true} title={title} content={content} />
           </Col>
           <Col lg={12} md={12} sm={24}>
-            <S.FormGroup autoComplete="off" onSubmit={(e) => handleSubmit(e, url)}>
+            <S.FormGroup autoComplete="off" onSubmit={handleSubmit}>
               <Col span={24}>
-                <ValidationType type="kakaotalkId" />
                 <Input
                   type="text"
-                  name="kakaotalkId"
+                  name="kakaotalk_id"
                   id={t('KakaoTalk ID')}
                   placeholder={t('Please type your KakaoTalk ID!')}
-                  value={values.kakaotalkId || ''}
+                  value={values.kakaotalk_id || ''}
                   onChange={handleChange}
                 />
+                <ValidationType type="kakaotalk_id" />
               </Col>
 
-              <Col>{FetchToursList(url, t)}</Col>
+              {/* TODO(@jin) 여기서부터 예약폼 작성 */}
+              <Col>{FetchToursList(realEstateId, t)}</Col>
 
               <S.ButtonContainer>
                 <Button name="submit" type="submit">
-                  {t('Book')}
+                  {t('Submit')}
                 </Button>
               </S.ButtonContainer>
             </S.FormGroup>
