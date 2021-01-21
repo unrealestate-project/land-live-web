@@ -8,7 +8,7 @@ import { CSSTransition } from 'react-transition-group';
 import * as S from './styles';
 const SvgIcon = loadable(() => import('../../common/SvgIcon'));
 
-const handleChange = (event) => {
+const handleLangChange = (event) => {
   i18n.changeLanguage(event.target.value);
 };
 
@@ -53,7 +53,7 @@ const Header = ({ t }) => {
         </S.CustomNavLinkSmall>
         <S.CustomNavLinkSmall></S.CustomNavLinkSmall>
         <S.CustomNavLinkSmall>
-          <S.LangSelect onChange={handleChange} value={i18n.language} id="select-lang">
+          <S.LangSelect onChange={handleLangChange} value={i18n.language} id="select-lang">
             <option value="ko">한국어</option>
             <option value="en">English</option>
           </S.LangSelect>

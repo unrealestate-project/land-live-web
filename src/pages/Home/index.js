@@ -16,11 +16,19 @@ const ScrollToTop = loadable(() => import('../../common/ScrollToTop'));
 
 const Home = () => {
   const location = useLocation();
-  const roomId = location.hash.replace('#/', '');
+  const realEstateId = location.hash.replace('#/', '');
   return (
     <Container>
       <ScrollToTop />
-      {roomId && <BookFrom title={BookContent.title} content={BookContent.text} id="book" />}
+      {/* Only show this block when URL accessed with <SITE_URL>/#/<realEstateId> */}
+      {realEstateId && (
+        <BookFrom
+          title={BookContent.title}
+          content={BookContent.text}
+          id="book"
+          realEstateId={realEstateId}
+        />
+      )}
       <ContentBlock
         type="right"
         first="true"

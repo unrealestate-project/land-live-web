@@ -1,17 +1,77 @@
 import loadable from '@loadable/component';
-import { Col, Row } from 'antd';
-import React from 'react';
+import { Card, Col, Row, Button as AntButton } from 'antd';
+import axios from 'axios';
+import React, { useState, useEffect } from 'react';
 import { withTranslation } from 'react-i18next';
 import Zoom from 'react-reveal/Zoom';
 import * as S from './styles';
 import useForm from './useForm';
 import validate from './validationRules';
+import i18n from 'i18next';
 
+const moment = require('moment');
 const Block = loadable(() => import('../Block'));
 const Input = loadable(() => import('../../common/Input'));
 const Button = loadable(() => import('../../common/Button'));
 
-const Book = ({ title, content, id, t }) => {
+function processDateTime(streaming_date) {
+  const titleDateFormat = i18n.language === 'en' ? 'YYYY-MM-DD' : 'YYYY년 MM월 DD일';
+  const contentTimeFormat = i18n.language === 'en' ? 'HH:mm' : 'HH시 mm분';
+
+  var localDate = new Date(streaming_date);
+  const startDate = localDate.toLocaleString();
+
+  const title = moment(startDate).format(titleDateFormat);
+  const content = moment(startDate).format(contentTimeFormat);
+  return { title, content };
+}
+
+const onClickCard = () => {
+  console.log('hihihi');
+};
+
+const FetchToursList = (realEstateId, t) => {
+  const [tours, setTours] = useState([]);
+  const url = `http://127.0.0.1:8000/api/v1/booking/real_estates/${realEstateId}/tours`;
+  useEffect(() => {
+    const callApi = async () => {
+      try {
+        const res = await axios.get(url);
+        const { data } = res;
+        if (data) {
+          setTours(data.tours);
+        }
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    callApi();
+    // eslint-disable-next-line
+  }, []);
+  return (
+    <div className="site-card-wrapper">
+      <label htmlFor="bookCard">{t('Available Booking')}</label>
+      <Row gutter={16}>
+        {tours.map(({ id, streaming_date, streaming_duration_min }) => {
+          const { title, content } = processDateTime(streaming_date, streaming_duration_min);
+          return (
+            <Col span={8}>
+              <div key={id}>
+                <Card bordered={true} align="center" bodyStyle={{ backgroundColor: '#f0f0f0' }}>
+                  <strong>{title}</strong>
+                  <p>{content}</p>
+                  <AntButton onClick={onClickCard}>Select</AntButton>
+                </Card>
+              </div>
+            </Col>
+          );
+        })}
+      </Row>
+    </div>
+  );
+};
+
+const Book = ({ title, content, id, t, realEstateId }) => {
   const { values, errors, handleChange, handleSubmit } = useForm(validate);
 
   const ValidationType = ({ type }) => {
@@ -37,14 +97,18 @@ const Book = ({ title, content, id, t }) => {
               <Col span={24}>
                 <Input
                   type="text"
-                  name="name"
+                  name="kakaotalk_id"
                   id={t('KakaoTalk ID')}
                   placeholder={t('Please type your KakaoTalk ID!')}
-                  value={values.name || ''}
+                  value={values.kakaotalk_id || ''}
                   onChange={handleChange}
                 />
-                <ValidationType type="name" />
+                <ValidationType type="kakaotalk_id" />
               </Col>
+
+              {/* TODO(@jin) 여기서부터 예약폼 작성 */}
+              <Col>{FetchToursList(realEstateId, t)}</Col>
+
               <S.ButtonContainer>
                 <Button name="submit" type="submit">
                   {t('Submit')}
