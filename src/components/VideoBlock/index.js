@@ -5,7 +5,7 @@ import ReactPlayer from 'react-player/lazy';
 
 const VideoBlock = ({ t }) => {
   return (
-    <Row>
+    <Row gutter={[16, 16]}>
       <Col span={12} align="center">
         <strong>{t('Before Land Live+ 😨')}</strong>
         <ReactPlayer url="https://youtu.be/ISff-JsOQAI" muted={true} playing={true} loop={true} />
