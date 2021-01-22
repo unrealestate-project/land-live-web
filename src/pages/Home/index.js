@@ -1,18 +1,18 @@
 import loadable from '@loadable/component';
-import React from 'react';
 import { useLocation } from 'react-router-dom';
 import BookContent from '../../content/BookContent.json';
 import Intro1Content from '../../content/Intro1Content.json';
 import Intro2Content from '../../content/Intro2Content.json';
-import Step3DoneContent from '../../content/Step3DoneContent.json';
 import Step1BookContent from '../../content/Step1BookContent.json';
 import Step2ConfirmContent from '../../content/Step2ConfirmContent.json';
+import Step3DoneContent from '../../content/Step3DoneContent.json';
 
 const BookFrom = loadable(() => import('../../components/BookForm'));
 const ContentBlock = loadable(() => import('../../components/ContentBlock'));
 const MiddleBlock = loadable(() => import('../../components/MiddleBlock'));
 const Container = loadable(() => import('../../common/Container'));
 const ScrollToTop = loadable(() => import('../../common/ScrollToTop'));
+const VideoBlock = loadable(() => import('../../components/VideoBlock'));
 
 const Home = () => {
   const location = useLocation();
@@ -39,9 +39,8 @@ const Home = () => {
         id="intro"
       />
       <MiddleBlock title={Intro2Content.title} content={Intro2Content.text} />
-
-      {/* TODO(@jin) Insert 2 video clips  */}
-
+      {/* Videos */}
+      <VideoBlock />
       <ContentBlock
         type="left"
         title={Step1BookContent.title}
@@ -57,7 +56,6 @@ const Home = () => {
         icon="product-launch.svg"
         id="mission"
       />
-
       <ContentBlock
         type="left"
         title={Step3DoneContent.title}
