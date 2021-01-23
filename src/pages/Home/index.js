@@ -7,7 +7,7 @@ import Step1BookContent from '../../content/Step1BookContent.json';
 import Step2ConfirmContent from '../../content/Step2ConfirmContent.json';
 import Step3DoneContent from '../../content/Step3DoneContent.json';
 
-const BookFrom = loadable(() => import('../../components/BookForm'));
+const BookForm = loadable(() => import('../../components/BookForm'));
 const ContentBlock = loadable(() => import('../../components/ContentBlock'));
 const MiddleBlock = loadable(() => import('../../components/MiddleBlock'));
 const Container = loadable(() => import('../../common/Container'));
@@ -22,7 +22,7 @@ const Home = () => {
       <ScrollToTop />
       {/* Only show this block when URL accessed with <SITE_URL>/#/<realEstateId> */}
       {realEstateId && (
-        <BookFrom
+        <BookForm
           title={BookContent.title}
           content={BookContent.text}
           id="book"

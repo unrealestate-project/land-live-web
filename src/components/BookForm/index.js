@@ -65,6 +65,7 @@ const FetchToursList = (url, t) => {
 };
 
 const Book = ({ title, content, id, t, realEstateId }) => {
+  console.log(SERVER_BASE_URL);
   const { values, errors, handleChange, handleSubmit } = useForm(validate, t);
   const url = `${SERVER_BASE_URL}/booking/real_estates/${realEstateId}/tours`;
 
@@ -89,13 +90,13 @@ const Book = ({ title, content, id, t, realEstateId }) => {
           <Col lg={12} md={12} sm={24}>
             <S.FormGroup autoComplete="off" onSubmit={(e) => handleSubmit(e, url)}>
               <Col span={24}>
-                <ValidationType type="kakaotalkId" />
+                <ValidationType type="kakaotalk_id" />
                 <Input
                   type="text"
-                  name="kakaotalkId"
+                  name="kakaotalk_id"
                   id={t('KakaoTalk ID')}
                   placeholder={t('Please type your KakaoTalk ID!')}
-                  value={values.kakaotalkId || ''}
+                  value={values.kakaotalk_id || ''}
                   onChange={handleChange}
                 />
               </Col>

@@ -30,10 +30,14 @@ const useForm = (validate, t) => {
           ...values,
         })
         .then(() => {
+          console.log('then');
           setShouldSubmit(true);
         })
-        .catch(() => {
+        .catch((e) => {
+          console.log('catch');
+          setShouldSubmit(false);
           openNotificationWithIcon('error');
+          return e;
         });
     }
   };
@@ -42,6 +46,7 @@ const useForm = (validate, t) => {
     if (Object.keys(errors).length === 0 && shouldSubmit) {
       setValues('');
       openNotificationWithIcon('success');
+      setShouldSubmit(false);
     }
     // eslint-disable-next-line
   }, [errors, shouldSubmit]);
