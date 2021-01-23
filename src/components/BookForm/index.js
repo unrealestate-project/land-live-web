@@ -65,7 +65,6 @@ const FetchToursList = (url, t) => {
 };
 
 const Book = ({ title, content, id, t, realEstateId }) => {
-  console.log(SERVER_BASE_URL);
   const { values, errors, handleChange, handleSubmit } = useForm(validate, t);
   const url = `${SERVER_BASE_URL}/booking/real_estates/${realEstateId}/tours`;
 

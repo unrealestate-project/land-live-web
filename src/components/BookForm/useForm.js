@@ -30,11 +30,9 @@ const useForm = (validate, t) => {
           ...values,
         })
         .then(() => {
-          console.log('then');
           setShouldSubmit(true);
         })
         .catch((e) => {
-          console.log('catch');
           setShouldSubmit(false);
           openNotificationWithIcon('error');
           return e;
