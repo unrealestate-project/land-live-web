@@ -27,6 +27,7 @@ function processDateTime(streaming_date) {
   return { title, content };
 }
 
+// eslint-disable-next-line
 const FetchToursList = (url, t) => {
   const [tours, setTours] = useState([]);
   useEffect(() => {
@@ -100,7 +101,8 @@ const Book = ({ title, content, id, t, realEstateId }) => {
                 />
               </Col>
 
-              <Col>{FetchToursList(url, t)}</Col>
+              {/* We decided not pre-arrange tour schedule */}
+              {/* <Col>{FetchToursList(url, t)}</Col> */}
 
               <S.ButtonContainer>
                 <Button name="submit" type="submit">
