@@ -12,7 +12,6 @@ const ContentBlock = loadable(() => import('../../components/ContentBlock'));
 const MiddleBlock = loadable(() => import('../../components/MiddleBlock'));
 const Container = loadable(() => import('../../common/Container'));
 const ScrollToTop = loadable(() => import('../../common/ScrollToTop'));
-const VideoBlock = loadable(() => import('../../components/VideoBlock'));
 
 const Home = () => {
   const location = useLocation();
@@ -40,7 +39,7 @@ const Home = () => {
       />
       <MiddleBlock title={Intro2Content.title} content={Intro2Content.text} />
       {/* Videos */}
-      <VideoBlock />
+      {/* <VideoBlock /> */}
       <ContentBlock
         type="left"
         title={Step1BookContent.title}
