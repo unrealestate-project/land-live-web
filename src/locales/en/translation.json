@@ -36,5 +36,11 @@
   "Please type your KakaoTalk ID!": "Please type your KakaoTalk ID!",
 
   "Tour Schedule": "Tour Schedule",
-  "Select": "Select"
+  "Select": "Select",
+
+  "Your tour has been booked!": "Your tour has been booked!",
+  "Success 💫": "Success 💫",
+
+  "Unable to book!": "Unable to book!",
+  "Sorry 😔": "Sorry 😔"
 }
