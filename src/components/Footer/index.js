@@ -25,7 +25,7 @@ const Footer = ({ t }) => {
               <Col lg={5} md={10} sm={12} xs={24}>
                 <S.Language>{t('Contact')}</S.Language>
                 <S.Para>{'© 2021 Land Corporation, Inc.'}</S.Para>
-                <S.Para>{'Email: jin@landcorp.io'}</S.Para>
+                <S.Para>{'Email: hello@landcorp.io'}</S.Para>
               </Col>
             </Row>
           </Container>
