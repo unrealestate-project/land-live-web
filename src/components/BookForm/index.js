@@ -65,7 +65,7 @@ const FetchToursList = (url, t) => {
   );
 };
 
-const Book = ({ title, content, id, t, realEstateId }) => {
+const Book = ({ titles, content, id, t, realEstateId }) => {
   const { values, errors, handleChange, handleSubmit } = useForm(validate, t);
   const url = `${SERVER_BASE_URL}/booking/real_estates/${realEstateId}/tours`;
 
@@ -85,7 +85,8 @@ const Book = ({ title, content, id, t, realEstateId }) => {
       <S.Book>
         <Row type="flex" justify="space-between" align="middle">
           <Col lg={12} md={11} sm={24}>
-            <Block padding={true} title={title} content={content} />
+            <Block padding={true} title={titles[0]} />
+            <Block padding={true} title={titles[1]} content={content} />
           </Col>
           <Col lg={12} md={12} sm={24}>
             <S.FormGroup autoComplete="off" onSubmit={(e) => handleSubmit(e, url)}>

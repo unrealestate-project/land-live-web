@@ -23,7 +23,7 @@ const Home = () => {
       {/* Only show this block when URL accessed with <SITE_URL>/#/<realEstateId> */}
       {realEstateId && (
         <BookForm
-          title={BookContent.title}
+          titles={BookContent.titles}
           content={BookContent.text}
           id="book"
           realEstateId={realEstateId}
