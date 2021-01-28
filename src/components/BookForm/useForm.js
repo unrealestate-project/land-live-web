@@ -16,7 +16,7 @@ const useForm = (validate, t) => {
     } else {
       notification[type]({
         message: t('Sorry 😔'),
-        description: t('You already booked tour!'),
+        description: t('Unable to book!'),
       });
     }
   };
