@@ -20,14 +20,14 @@ const Home = () => {
     <Container>
       <ScrollToTop />
       {/* Only show this block when URL accessed with <SITE_URL>/#/<realEstateId> */}
-      {realEstateId && (
-        <BookForm
-          titles={BookContent.titles}
-          content={BookContent.text}
-          id="book"
-          realEstateId={realEstateId}
-        />
-      )}
+      {/* {realEstateId && ( */}
+      <BookForm
+        titles={BookContent.titles}
+        content={BookContent.text}
+        id="book"
+        realEstateId={realEstateId}
+      />
+      {/* )} */}
       <ContentBlock
         type="right"
         first="true"
