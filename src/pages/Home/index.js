@@ -12,7 +12,7 @@ const ContentBlock = loadable(() => import('../../components/ContentBlock'));
 const MiddleBlock = loadable(() => import('../../components/MiddleBlock'));
 const Container = loadable(() => import('../../common/Container'));
 const ScrollToTop = loadable(() => import('../../common/ScrollToTop'));
-
+const AppPhoto = loadable(() => import('../../common/Photo'));
 const Home = () => {
   const location = useLocation();
   const realEstateId = location.hash.replace('#/', '');
@@ -27,7 +27,6 @@ const Home = () => {
         id="book"
         realEstateId={realEstateId}
       />
-      {/* )} */}
       <ContentBlock
         type="right"
         first="true"
@@ -38,8 +37,8 @@ const Home = () => {
         id="intro"
       />
       <MiddleBlock title={Intro2Content.title} content={Intro2Content.text} />
-      {/* Videos */}
-      {/* <VideoBlock /> */}
+      <AppPhoto />
+
       <ContentBlock
         type="left"
         title={Step1BookContent.title}
