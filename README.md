@@ -78,15 +78,15 @@ To see how it looks, please visit 👉 **[landcorp.io](https://landcorp.io)**
 ## Guide
 
 <p align="center">
-  <img src="https://github.com/Land-Corporation/land-live-web/blob/devel/photo/guide1.png" width="80%" title="hover text">
+  <img src="https://github.com/Land-Corporation/land-live-web/blob/devel/photo/guide1.png" width="100%" title="hover text">
 </p>
 
 <p align="center">
-  <img src="https://github.com/Land-Corporation/land-live-web/blob/devel/photo/guide2.png" width="80%" title="hover text">
+  <img src="https://github.com/Land-Corporation/land-live-web/blob/devel/photo/guide2.png" width="100%" title="hover text">
 </p>
 
 <p align="center">
-  <img src="https://github.com/Land-Corporation/land-live-web/blob/devel/photo/guide3.png" width="80%" title="hover text">
+  <img src="https://github.com/Land-Corporation/land-live-web/blob/devel/photo/guide3.png" width="100%" title="hover text">
 </p>
 
 <p><br></p>
