@@ -6,6 +6,8 @@ This is a **Minimal Viable Product (MVP)** that consists of `reservation system`
 
 > Note that this is a MVP which does not contain any **real-time streaming** feature. Actual real-time streaming feature will be developed on next cycle; prototyping.
 
+<p><br></p>
+
 ## Background
 
 Developing real-time streaming application is expensive in terms of money and time. Since we are a team who seeks to find valuable **product market fit** with limited resource, had to come up with some sort of solution that discovers market needs with minimum cost.
@@ -41,6 +43,8 @@ But since real-estate brokerage application like `Zigbang` and `Dabang` already 
 - We will conduct real live tour for each real-estate via using Youtube Live.
 - Gather up feedbacks, KPIs and decide whether there is enough market needs!
 
+<p><br></p>
+
 ## Installation
 
 Use the package manager [yarn](https://yarnpkg.com/) to install land-live-web
@@ -48,6 +52,8 @@ Use the package manager [yarn](https://yarnpkg.com/) to install land-live-web
 ```bash
 yarn install
 ```
+
+<p><br></p>
 
 ## Usage
 
@@ -57,16 +63,40 @@ yarn run start
 
 And open `http://localhost:3000/`
 
+<p><br></p>
+
 ## Look & Feel
 
 To see how it looks, please visit 👉 **[landcorp.io](https://landcorp.io)**
 
+<p align="center">
+  <img src="https://github.com/Land-Corporation/land-live-web/blob/devel/photo/landing_page.png" width="80%" title="hover text">
+</p>
+
+<p><br></p>
+
 ## Guide
+
+<p align="center">
+  <img src="https://github.com/Land-Corporation/land-live-web/blob/devel/photo/guide1.png" width="80%" title="hover text">
+</p>
+
+<p align="center">
+  <img src="https://github.com/Land-Corporation/land-live-web/blob/devel/photo/guide2.png" width="80%" title="hover text">
+</p>
+
+<p align="center">
+  <img src="https://github.com/Land-Corporation/land-live-web/blob/devel/photo/guide3.png" width="80%" title="hover text">
+</p>
+
+<p><br></p>
 
 ## Contributing
 
 - All rights reserved to Land Corporation, Inc.
 - Main developer: [@JinJis](https://github.com/JinJis)
+
+<p><br></p>
 
 ## License
 
