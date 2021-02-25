@@ -70,7 +70,7 @@ And open `http://localhost:3000/`
 To see how it looks, please visit 👉 **[landcorp.io](https://landcorp.io)**
 
 <p align="center">
-  <img src="https://github.com/Land-Corporation/land-live-web/blob/devel/photo/landing_page.png" width="80%" title="hover text">
+  <img src="https://github.com/Land-Corporation/land-live-web/blob/devel/photo/landing_page.png" width="100%" title="hover text">
 </p>
 
 <p><br></p>
