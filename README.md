@@ -50,6 +50,10 @@ Consider `Zigbang` the biggest real-estate application in Korea where it needs t
 
 **Thus we decided to go with Real Estate Live Tour solution for our MVP.**
 
+<p align="center">
+  <img src="https://github.com/Land-Corporation/land-live-web/blob/devel/photo/land_live_app.png" width="80%" title="hover text">
+</p>
+
 Since this is two-sided market where both realtors and potential real-estate customers should all behave in this platform actively, it is crucial to have them flowed in.
 
 But since real-estate brokerage application like `Zigbang` and `Dabang` already have a lot of active users. Thus if we can make realtors to upload our Live Tour reservation link to their pages and items in `Zigbang` or `Dabang`, users who see those linke will be tempted to click and book. We wanted to measure the turnover rate for booking, actual live tour watchers etc to validate the market fit and needs.
