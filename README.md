@@ -12,6 +12,26 @@ This is a **Minimal Viable Product (MVP)** that consists of `reservation system`
 
 Developing real-time streaming application is expensive in terms of money and time. Since we are a team who seeks to find valuable **product market fit** with limited resource, had to come up with some sort of solution that discovers market needs with minimum cost.
 
+### What We Have Been Doing
+
+1. **Application for Landlords**
+
+Our original business idea was automation of real-estate management driven by `application for Landlords`. We anticipated to digitize real-esate information that are valuable but hard to collect in conventional ways; landlords, lesseses, real-esate information, rental fee etc. By making attractive yet easy application for landlords, induce them to invite their lesseses into app and thus make platformal changes will pave ways for total digitization of real-estate in long term. 
+This turned out to be obsolete hypothesis since landlords do not even need application since they can just make a simple call to realtors to deal with manageial tasks.
+
+> We decided to halt this system due to lack of customer needs for the application. No big pain point.
+
+Business Plan for this idea is [here](https://drive.google.com/file/d/19k1aGcMUNNeWM3QqRBnVg4QTYtYD0Tll/view?usp=sharing)
+
+2. **Real Estate Open-market Platform**
+
+During the course of researching, interviewing many real-estate personas, we figured out that there is inefficiency and discrepencies in real-estate industry, especially transaction market. We noticed that both customers who look for real-estate and realtors are all suffering from the current system. Unlike other consumer goods where customers can easily access to the product, get the lowest price and get delivered to their home with one-click through digital transformation, we thought real-esate can be topped on the digitized open-market system, providing trust, efficient transaction and convenience. But we laceked in the property of real-esate industry, that real-estate is strictly interwined with regualtion, unique property that cannot be moved, transaction price being super high while frequency being too low.
+
+> We decided to halt this system due to limitations on business acumen and development complexity
+
+Business Plan for this idea is [here](https://drive.google.com/file/d/18lSov6OIRX-sUv9OnRPAiqIV7Ld2wdir/view?usp=sharing)
+
+
 ### Lessons learned
 
 ❗️ After months of struggling - meeting with many realtors, landlords and lessees - we strongly felt that **in order to make something innovative in real estate industry we need to meet followings**
@@ -23,7 +43,7 @@ Since real estate is an asset that is unique, not movable and so expensive, it i
 
 Consider `Zigbang` the biggest real-estate application in Korea where it needs to struggle every-time the brokerage regulation changes. It does not even generate enough profit despite it got a huge amount of investment.
 
-### What we decided
+### What we decided: "Live Tour Solution for Real Estate"
 
 ✅ We think **_doing leg work_** for searching real-estate **_(aka 발품팔기)_** is the only step left in customer value chain of real-estate that is not yet innovated by IT technology.
 
