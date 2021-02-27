@@ -16,20 +16,19 @@ Developing real-time streaming application is expensive in terms of money and ti
 
 1. **Application for Landlords**
 
-Our original business idea was automation of real-estate management driven by `application for Landlords`. We anticipated to digitize real-esate information that are valuable but hard to collect in conventional ways; landlords, lesseses, real-esate information, rental fee etc. By making attractive yet easy application for landlords, induce them to invite their lesseses into app and thus make platformal changes will pave ways for total digitization of real-estate in long term. 
-This turned out to be obsolete hypothesis since landlords do not even need application since they can just make a simple call to realtors to deal with manageial tasks.
+Our original business idea was automation of real-estate management driven by `application for Landlords`. We wanted to digitize real-esate information that are valuable but hard to collect in conventional ways; landlords, lesseses, real-esate information, rental fee etc. 
 
 > We decided to halt this system due to lack of customer needs for the application. No big pain point.
 
-Business Plan for this idea is [here](https://drive.google.com/file/d/19k1aGcMUNNeWM3QqRBnVg4QTYtYD0Tll/view?usp=sharing)
+**Business Plan for this idea is [here](https://drive.google.com/file/d/19k1aGcMUNNeWM3QqRBnVg4QTYtYD0Tll/view?usp=sharing)**
 
 2. **Real Estate Open-market Platform**
 
-During the course of researching, interviewing many real-estate personas, we figured out that there is inefficiency and discrepencies in real-estate industry, especially transaction market. We noticed that both customers who look for real-estate and realtors are all suffering from the current system. Unlike other consumer goods where customers can easily access to the product, get the lowest price and get delivered to their home with one-click through digital transformation, we thought real-esate can be topped on the digitized open-market system, providing trust, efficient transaction and convenience. But we laceked in the property of real-esate industry, that real-estate is strictly interwined with regualtion, unique property that cannot be moved, transaction price being super high while frequency being too low.
+During the course of researching, interviewing many real-estate personas, we figured out that there is inefficiency and discrepencies in real-estate industry, especially transaction market. We noticed that both customers who look for real-estate and realtors are all suffering from the current system.
 
 > We decided to halt this system due to limitations on business acumen and development complexity
 
-Business Plan for this idea is [here](https://drive.google.com/file/d/18lSov6OIRX-sUv9OnRPAiqIV7Ld2wdir/view?usp=sharing)
+**Business Plan for this idea is [here](https://drive.google.com/file/d/18lSov6OIRX-sUv9OnRPAiqIV7Ld2wdir/view?usp=sharing)**
 
 
 ### Lessons learned
