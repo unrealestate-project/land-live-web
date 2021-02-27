@@ -20,7 +20,7 @@ Our original business idea was automation of real-estate management driven by `a
 
 > We decided to halt this system due to lack of customer needs for the application. No big pain point.
 
-👉 **[Business Plan](https://drive.google.com/file/d/19k1aGcMUNNeWM3QqRBnVg4QTYtYD0Tll/view?usp=sharing)**
+👉 **[Business Plan V1.0](https://drive.google.com/file/d/19k1aGcMUNNeWM3QqRBnVg4QTYtYD0Tll/view?usp=sharing)**
 
 2. **Real Estate Open-market Platform**
 
@@ -28,7 +28,7 @@ During the course of researching, interviewing many real-estate personas, we fig
 
 > We decided to halt this system due to limitations on business acumen and development complexity
 
-👉 **[Business Plan](https://drive.google.com/file/d/18lSov6OIRX-sUv9OnRPAiqIV7Ld2wdir/view?usp=sharing)**
+👉 **[Business Plan V2.0](https://drive.google.com/file/d/18lSov6OIRX-sUv9OnRPAiqIV7Ld2wdir/view?usp=sharing)**
 
 
 ### Lessons learned
