@@ -117,7 +117,7 @@ To see how it looks, please visit 👉 **[landcorp.io](https://landcorp.io)**
 ## Contributing
 
 - All rights reserved to Land Corporation, Inc.
-- Main developer: [@JinJis](https://github.com/JinJis)
+- Contributors: [@JinJis](https://github.com/JinJis), [@JYJEONG123](https://github.com/JYJEONG123)
 
 <p><br></p>
 
