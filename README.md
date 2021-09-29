@@ -8,9 +8,13 @@ This is a **Minimal Viable Product (MVP)** that consists of `reservation system`
 
 <p><br></p>
 
+
 ## Background
 
 Developing real-time streaming application is expensive in terms of money and time. Since we are a team who seeks to find valuable **product market fit** with limited resource, had to come up with some sort of solution that discovers market needs with minimum cost.
+
+<p><br></p>
+
 
 ### What We Have Been Doing
 
@@ -22,6 +26,8 @@ Our original business idea was automation of real-estate management driven by `a
 
 👉 **[Business Plan V1.0](https://drive.google.com/file/d/19k1aGcMUNNeWM3QqRBnVg4QTYtYD0Tll/view?usp=sharing)**
 
+<p><br></p>
+
 2. **Real Estate Open-market Platform**
 
 During the course of researching, interviewing many real-estate personas, we figured out that there is inefficiency and discrepencies in real-estate industry, especially transaction market. We noticed that both customers who look for real-estate and realtors are all suffering from the current system.
@@ -30,23 +36,33 @@ During the course of researching, interviewing many real-estate personas, we fig
 
 👉 **[Business Plan V2.0](https://drive.google.com/file/d/18lSov6OIRX-sUv9OnRPAiqIV7Ld2wdir/view?usp=sharing)**
 
+<p><br></p>
+
 
 ### Lessons learned
 
 ❗️ After months of struggling - meeting with many realtors, landlords and lessees - we strongly felt that **in order to make something innovative in real estate industry we need to meet followings**
 
+<p><br></p>
+
 1. **Bypass Real Estate Regulation**
 2. **No transaction or brokerage**
+
+<p><br></p>
 
 Since real estate is an asset that is unique, not movable and so expensive, it is really hard to get it topped with technology. Even we somehow does it, it is also very hard to make money about of it.
 
 Consider `Zigbang` the biggest real-estate application in Korea where it needs to struggle every-time the brokerage regulation changes. It does not even generate enough profit despite it got a huge amount of investment.
+
+<p><br></p>
 
 ### What we decided: "Live Tour Solution for Real Estate"
 
 ✅ We think **_doing leg work_** for searching real-estate **_(aka 발품팔기)_** is the only step left in customer value chain of real-estate that is not yet innovated by IT technology.
 
 > That said, we still need to call realtors, book time for touring. We still need to spend many days to search for the perfect rooms and house for us by contacting someone.
+
+<p><br></p>
 
 **Thus we decided to go with Real Estate Live Tour solution for our MVP.**
 
@@ -57,6 +73,8 @@ Consider `Zigbang` the biggest real-estate application in Korea where it needs t
 Since this is two-sided market where both realtors and potential real-estate customers should all behave in this platform actively, it is crucial to have them flowed in.
 
 But since real-estate brokerage application like `Zigbang` and `Dabang` already have a lot of active users. Thus if we can make realtors to upload our Live Tour reservation link to their pages and items in `Zigbang` or `Dabang`, users who see those linke will be tempted to click and book. We wanted to measure the turnover rate for booking, actual live tour watchers etc to validate the market fit and needs.
+
+<p><br></p>
 
 ### MVP product roadmap
 
